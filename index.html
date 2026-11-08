@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART THROUGH TIME | Historical Expedition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <!-- SPACESHIP INTRO -->
+    <section id="homeScreen" class="home-screen">
+        <div class="intro-grid">
+            <div class="intro-content">
+                <span class="eyebrow">CHRONOS EXPLORATION PROGRAM</span>
+                <h1>ART THROUGH <span>TIME</span></h1>
+                <p class="intro-description">
+                    Travel across centuries. Discover humanity's greatest
+                    artistic achievements. Experience the evolution of art.
+                </p>
+
+                <div class="mission-info">
+                    <div><small>MISSION</small><strong>AT-018</strong></div>
+                    <div><small>DESTINATIONS</small><strong>18 ERAS</strong></div>
+                    <div><small>STATUS</small><strong class="online">READY</strong></div>
+                </div>
+
+                <button id="launchBtn" class="primary-btn">
+                    INITIATE EXPEDITION <span>→</span>
+                </button>
+            </div>
+
+            <div class="ship-visual">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="planet"></div>
+                <div class="ship-core">AT</div>
+                <span class="ship-label">CHRONOS-01</span>
+            </div>
+        </div>
+
+        <div class="bottom-intro">
+            <span>CHRONOS-01 TIME TRAVEL SYSTEM</span>
+            <span>HUMANITIES EXPEDITION DIVISION</span>
+            <span>YEAR 3026</span>
+        </div>
+    </section>
+
+    <!-- TIMELINE DESTINATION SELECTION -->
+    <main id="timelineSection" class="timeline-section hidden">
+
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">AT</div>
+                <div>
+                    <strong>ART THROUGH TIME</strong>
+                    <small>CHRONOS EXPEDITION</small>
+                </div>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                TIME ENGINE ONLINE
+            </div>
+
+            <button id="soundToggle" class="sound-btn">
+                <span id="soundIcon">♫</span>
+                <span id="soundLabel">SOUND ON</span>
+            </button>
+        </header>
+
+        <section class="timeline-hero">
+            <span class="eyebrow">DESTINATION SELECTION</span>
+            <h1>Choose Your <span>Era</span></h1>
+            <p>Select a historical period to begin your expedition.</p>
+
+            <div class="timeline-stats">
+                <div><strong id="eraCount">18</strong><small>DESTINATIONS</small></div>
+                <div><strong>40,000+</strong><small>YEARS OF ART</small></div>
+                <div><strong>01</strong><small>TIME MACHINE</small></div>
+            </div>
+        </section>
+
+        <div class="search-area">
+            <input type="text" id="searchInput"
+                placeholder="Search art movements, artists, or periods...">
+        </div>
+
+        <div id="timeline" class="timeline-grid"></div>
+
+        <footer class="page-footer">
+            CHRONOS-01 • SELECT YOUR NEXT DESTINATION
+        </footer>
+    </main>
+
+    <!-- TIME TRAVEL OVERLAY -->
+    <div id="travelOverlay" class="travel-overlay">
+        <div class="warp-ring ring-a"></div>
+        <div class="warp-ring ring-b"></div>
+        <div class="warp-content">
+            <span class="eyebrow">CHRONOS TIME ENGINE</span>
+            <h1>TIME JUMP <span>INITIATED</span></h1>
+            <p id="travelTitle">Preparing destination...</p>
+            <p id="travelSubtitle">Calibrating temporal coordinates</p>
+
+            <div class="progress-track">
+                <div id="travelProgress"></div>
+            </div>
+
+            <strong id="flightStatus">CALIBRATING...</strong>
+        </div>
+    </div>
+
+    <!-- ERA EXPERIENCE -->
+    <main id="experience" class="experience hidden">
+
+        <header class="experience-header">
+            <button id="backBtn" class="back-btn">← DESTINATIONS</button>
+            <div class="exp-status">
+                <span class="status-dot"></span>
+                TEMPORAL CONNECTION ESTABLISHED
+            </div>
+            <button id="soundToggle2" class="sound-btn">♫ SOUND</button>
+        </header>
+
+        <section class="era-heading">
+            <div>
+                <span id="eraIndex" class="eyebrow">DESTINATION 01 / 18</span>
+                <h1 id="eraTitle">Cave Painting</h1>
+                <p id="eraDate">40,000 BCE</p>
+            </div>
+            <div class="era-origin">
+                <small>ORIGIN</small>
+                <strong id="eraOrigin">Prehistoric World</strong>
+            </div>
+        </section>
+
+        <!-- CINEMATIC HISTORICAL SCENE -->
+        <section class="scene-panel">
+            <div class="scene-top">
+                <span>◉ HISTORICAL VISUAL SIMULATION</span>
+                <span id="sceneLabel">SCENE 01</span>
+            </div>
+
+            <canvas id="eraCanvas"></canvas>
+
+            <div class="scene-caption">
+                <span>CHRONOS VISUAL RECONSTRUCTION</span>
+                <span>SIMULATED HISTORICAL ENVIRONMENT</span>
+            </div>
+        </section>
+
+        <!-- ERA INFORMATION -->
+        <section class="information-grid">
+
+            <div class="info-panel description-panel">
+                <span class="section-tag">HISTORICAL DATABASE</span>
+                <h2>Understanding the Era</h2>
+                <p id="eraDescription"></p>
+
+                <div id="eraFeatures" class="feature-list"></div>
+            </div>
+
+            <div class="info-panel narrator-panel">
+                <span class="section-tag">CHRONOS AI NARRATOR</span>
+                <h2>Listen to History</h2>
+
+                <div class="voice-wave">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                </div>
+
+                <p id="narratorStatus">Narrator standing by...</p>
+
+                <button id="narrateBtn" class="primary-btn">
+                    ▶ PLAY NARRATION
+                </button>
+            </div>
+
+        </section>
+
+        <!-- ARTIFACT DISCOVERY -->
+        <section class="artifact-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-tag">HISTORICAL DATABASE</span>
+                    <h2>ARTIFACT DISCOVERY</h2>
+                    <p>Explore the masterpieces and artworks of this era.</p>
+                </div>
+
+                <span class="database-status">● DATABASE CONNECTED</span>
+            </div>
+
+            <div id="artifactGallery" class="artifact-gallery">
+                <p class="loading-text">Loading historical artifacts...</p>
+            </div>
+
+        </section>
+
+        <!-- ARTISTS -->
+        <section class="information-grid">
+
+            <div class="info-panel">
+                <span class="section-tag">IMPORTANT FIGURES</span>
+                <h2>Artists of the Era</h2>
+                <div id="eraArtists" class="name-list"></div>
+            </div>
+
+            <div class="info-panel">
+                <span class="section-tag">HISTORICAL COLLECTION</span>
+                <h2>Notable Works</h2>
+                <div id="eraWorks" class="name-list"></div>
+            </div>
+
+        </section>
+
+        <!-- NAVIGATION -->
+        <div class="era-navigation">
+            <button id="prevEra" class="secondary-btn">← PREVIOUS ERA</button>
+            <button id="replayBtn" class="secondary-btn">↻ REPLAY SCENE</button>
+            <button id="nextEra" class="primary-btn">NEXT DESTINATION →</button>
+        </div>
+
+        <footer class="page-footer">
+            CHRONOS-01 • HISTORICAL EXPEDITION COMPLETE
+        </footer>
+
+    </main>
+
+    <!-- ARTWORK VIEWER -->
+    <div id="artifactViewer" class="artifact-viewer">
+        <div class="viewer-content">
+            <button id="closeArtifact" class="close-viewer">✕</button>
+
+            <img id="viewerImage" src="" alt="Selected artwork">
+
+            <div class="viewer-info">
+                <span class="section-tag">ARTWORK RECORD</span>
+                <h2 id="viewerTitle">Artwork Title</h2>
+                <p id="viewerArtist"></p>
+                <p id="viewerYear"></p>
+                <p id="viewerDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
